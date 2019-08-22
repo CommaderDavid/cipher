@@ -1,2 +1,3 @@
-var mainSentence = prompt("Enter your sentence.")
-var 
+$(document).ready(function() {
+  var mainSentence = prompt("Enter your sentence.");
+});
