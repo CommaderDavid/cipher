@@ -5,7 +5,7 @@ $(document).ready(function() {
   console.log(step1);
   var step2 = reverseString(step1);
   console.log(step2);
-  var step3 = showResult(mainSentence + step2);
+  var step3 = showResult(mainSentence.concat(step2));
 });
 
 function firstLast(mainSentence){
