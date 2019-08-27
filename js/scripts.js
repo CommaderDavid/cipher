@@ -5,6 +5,7 @@ $(document).ready(function() {
   console.log(step1);
   var step2 = reverseString(step1);
   console.log(step2);
+  var step3 = showResult(mainSentence + step2);
 });
 
 function firstLast(mainSentence){
@@ -20,4 +21,8 @@ function reverseString(str) {
   var joinArray = reverseArray.join("");
   // Return the reversed string
   return joinArray;
+};
+
+function showResult(show1) {
+  alert(show1);
 };
