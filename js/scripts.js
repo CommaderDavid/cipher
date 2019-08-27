@@ -4,6 +4,14 @@ $(document).ready(function() {
   var step4 = showResult(mainSentence);
   var step5 = middle(mainSentence) + step4;
   alert(step5);
+
+  $("img#code").click(function() {
+    alert(step5);
+  });
+
+  $("img#org").click(function() {
+    alert(mainSentence);
+  });
 });
 
 function firstLast(mainSentence){
