@@ -1,28 +1,26 @@
 $(document).ready(function() {
   var mainSentence = prompt("Enter your sentence.");
   console.log(mainSentence);
-  var step1 = firstLast(mainSentence);
-  console.log(step1);
-  var step2 = reverseString(step1);
-  console.log(step2);
-  var step3 = showResult(mainSentence.concat(step2));
+  var final = showResult(mainSentence);
 });
 
 function firstLast(mainSentence){
   return mainSentence.charAt(0).toUpperCase() + mainSentence.charAt(mainSentence.length-1).toUpperCase();
 };
 
-function reverseString(str) {
-  // Use the split() method to return a new string
-  var splitString = str.split("");
-  // Use the reverse() method to reverse the new array
-  var reverseArray = splitString.reverse();
-  // Use the join() method to reconnect all the elements of the array into a string
-  var joinArray = reverseArray.join("");
-  // Return the reversed string
-  return joinArray;
+function reverseFL(mainSentence) {
+  return mainSentence.charAt(mainSentence.length-1).toUpperCase() + mainSentence.charAt(0).toUpperCase();
 };
 
-function showResult(show1) {
-  alert(show1);
+function showResult(userInput) {
+  var step1 = firstLast(userInput);
+  console.log(step1);
+  var step2 = reverseFL(step1);
+  console.log(step2);
+  var step3 = userInput.concat(step2);
+  alert(step3);
 };
+
+// function middle(mainSentence) {
+//   return mainSentence.charAt(mainSentence.length/2);
+// }
