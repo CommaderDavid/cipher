@@ -12,5 +12,12 @@ function firstLast(mainSentence){
 };
 
 function reverseString(str) {
-    return str.split("").reverse().join("");
+  // Use the split() method to return a new string
+  var splitString = str.split("");
+  // Use the reverse() method to reverse the new array
+  var reverseArray = splitString.reverse();
+  // Use the join() method to reconnect all the elements of the array into a string
+  var joinArray = reverseArray.join("");
+  // Return the reversed string
+  return joinArray;
 };
