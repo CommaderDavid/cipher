@@ -1,7 +1,9 @@
 $(document).ready(function() {
   var mainSentence = prompt("Enter your sentence.");
   console.log(mainSentence);
-  var final = showResult(mainSentence);
+  var step4 = showResult(mainSentence);
+  var step5 = middle(mainSentence) + step4;
+  alert(step5);
 });
 
 function firstLast(mainSentence){
@@ -18,9 +20,10 @@ function showResult(userInput) {
   var step2 = reverseFL(step1);
   console.log(step2);
   var step3 = userInput.concat(step2);
-  alert(step3);
+  console.log(step3);
+  return step3;
 };
 
-// function middle(mainSentence) {
-//   return mainSentence.charAt(mainSentence.length/2);
-// }
+function middle(mainSentence) {
+  return mainSentence.charAt(mainSentence.length/2);
+};
